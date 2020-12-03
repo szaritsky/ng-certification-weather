@@ -1,0 +1,18 @@
+.forecast-icon {
+    height: 25px;
+    width: 25px;
+    margin: -5px;
+    padding: 5px;
+}
+
+div.outlineBox {
+    border: 1px solid #999;
+    padding: 10px;
+}
+
+div.outlineBox:before {
+    display: block;
+    position: absolute;
+    background: white;
+    padding: 1px;
+}

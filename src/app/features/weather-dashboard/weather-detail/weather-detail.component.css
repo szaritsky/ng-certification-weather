@@ -1,0 +1,21 @@
+div.outlineBox {
+    border: 1px solid #999;
+    padding: 10px;
+}
+
+div.outlineBox:before {
+    display: block;
+    position: absolute;
+    background: white;
+    padding: 1px;
+}
+
+.close:hover {
+    font-weight: 900;
+    font-size: large;
+    cursor: pointer;
+}
+.forecast-link {
+    color: blue;
+    cursor: pointer;
+}

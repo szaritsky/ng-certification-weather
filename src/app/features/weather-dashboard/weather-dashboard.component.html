@@ -1,0 +1,9 @@
+<app-weather-add-location></app-weather-add-location>
+<app-weather-error-message *ngIf='displayError' 
+   [errorMessage]='error' 
+   (errorClearEvent)='errorClear()'>
+</app-weather-error-message>
+
+<app-weather-detail *ngFor='let weatherLocationEntity of weatherLocationEntities'
+   [weatherLocationEntity] ='weatherLocationEntity'>
+</app-weather-detail>

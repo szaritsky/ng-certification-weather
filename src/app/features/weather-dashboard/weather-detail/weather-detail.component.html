@@ -1,0 +1,23 @@
+<div class="well flex outlineBox">
+   <div>
+      <h3>{{locationDescription}}</h3>
+      <h4>Current conditions: {{weatherLocationEntity.currentConditionAsString}}</h4>
+      <h4>Temperatures today:</h4>
+      <p>
+        Current Temperature: {{weatherLocationEntity.temperature | tempDisplay}} 
+      </p>
+      <p>
+         Max today: {{weatherLocationEntity.maxTemperature | tempDisplay}} - Min today: {{weatherLocationEntity.minTemperature | tempDisplay}}
+       </p>
+      <p>
+         <a class="forecast-link" (click)='navigateToForecast()'>Show 5-day forecast for {{weatherLocationEntity.location}}</a>
+      </p>
+   </div>
+   <div>
+      <img src={{weatherLocationEntity.weatherConditionImage}} alt="couldn't find">
+   </div>
+   <div>
+      <span class="close" (click)='onClose()'>×</span>
+   </div>
+</div>
+<br/>

@@ -1,0 +1,15 @@
+<div class="container-fluid">
+   <div class="panel panel-default outlineBox">
+      <div class="panel-heading">
+         <h3 class="panel-title ">5-day forecast for {{location}} ({{zipCode}})</h3> 
+      </div>
+      <ul class="list-group">
+         <li class="list-group-item" *ngFor='let forecastEntity of forecastEntities'>
+           {{forecastEntity.weekDay | weekDayPipe}}: {{forecastEntity.currentConditionAsString}} - Min: {{forecastEntity.minTemperature | tempDisplay}} - Max: {{forecastEntity.maxTemperature | tempDisplay}}
+           <img class="forecast-icon" src={{forecastEntity.weatherConditionImage}} alt="couldn't find">
+         </li>
+      </ul>
+   </div>
+   <br/>
+   <button class="btn btn-success" tabindex="0" id="mainPageBtn" (click)='navigateToMainPage()'>&lt; Back to main page</button>
+</div>
